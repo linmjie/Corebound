@@ -18,7 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.RAW_TIN.get());
 
-        handheldItem(ModItems.LOGGER_AXE);
+        //handheldItem(ModItems.LOGGER_AXE);
     }
 
     private ItemModelBuilder handheldItem(DeferredItem<?> item) {
