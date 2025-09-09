@@ -1,5 +1,6 @@
 package com.linmjie.corebound;
 
+import com.linmjie.corebound.block.ModBlocks;
 import com.linmjie.corebound.item.ModItems;
 import org.slf4j.Logger;
 
@@ -71,6 +72,8 @@ public class Corebound {
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
+
+        ModBlocks.BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
 

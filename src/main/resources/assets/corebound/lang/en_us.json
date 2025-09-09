@@ -1,7 +1,9 @@
 {
   "itemGroup.corebound": "Corebound",
-  "block.corebound.example_block": "Example Block",
-  "item.corebound.example_item": "Example Item",
+  "block.corebound.raw_tin_block": "Block of Raw Tin",
+
+  "item.corebound.raw_tin": "Raw Tin",
+  "item.corebound.logger_axe": "Logger Axe",
 
   "corebound.configuration.title": "Example Mod Configs",
   "corebound.configuration.section.corebound.common.toml": "Example Mod Configs",
