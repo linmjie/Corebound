@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "corebound:block/raw_tin_block"
+    }
+  }
+}
