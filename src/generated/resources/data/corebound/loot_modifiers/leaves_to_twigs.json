@@ -1,0 +1,20 @@
+{
+  "type": "corebound:add_item",
+  "conditions": [
+    {
+      "block": "minecraft:jungle_leaves",
+      "condition": "minecraft:block_state_property"
+    },
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "items": "corebound:wooden_shears"
+      }
+    },
+    {
+      "chance": 1.0,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "corebound:twig"
+}
