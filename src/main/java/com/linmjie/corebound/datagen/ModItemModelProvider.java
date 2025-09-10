@@ -17,6 +17,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.RAW_TIN.get());
+        basicItem(ModItems.TWIG.get());
+        handheldItem(ModItems.WOODEN_SHEARS);
 
         //handheldItem(ModItems.LOGGER_AXE);
     }
