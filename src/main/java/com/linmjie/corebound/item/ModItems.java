@@ -7,6 +7,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ShearsItem;
+import net.minecraft.world.item.SwordItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -23,5 +24,10 @@ public class ModItems {
     public static final DeferredItem<Item> WOODEN_SHEARS = ITEMS.register("wooden_shears",
             () -> new Item(new Item.Properties()
                     .durability(200)));
+
+    public static final DeferredItem<Item> WOODEN_CLUB = ITEMS.register("wooden_club",
+            () -> new Item(new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.IRON, 4, -2f))));
+
 
 }

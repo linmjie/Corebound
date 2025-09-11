@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RAW_TIN.get());
         basicItem(ModItems.TWIG.get());
         handheldItem(ModItems.WOODEN_SHEARS);
+        handheldItem(ModItems.WOODEN_CLUB);
 
         //handheldItem(ModItems.LOGGER_AXE);
     }
