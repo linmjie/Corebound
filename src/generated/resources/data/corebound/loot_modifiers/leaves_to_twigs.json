@@ -2,8 +2,8 @@
   "type": "corebound:add_item",
   "conditions": [
     {
-      "block": "minecraft:jungle_leaves",
-      "condition": "minecraft:block_state_property"
+      "condition": "corebound:block_tag_property",
+      "block_tag": "minecraft:leaves"
     },
     {
       "condition": "minecraft:match_tool",
