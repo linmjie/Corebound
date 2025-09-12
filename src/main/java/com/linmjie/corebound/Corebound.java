@@ -101,6 +101,9 @@ public class Corebound {
                 output.accept(ModItems.RAW_TIN.get());
                 output.accept(ModBlocks.RAW_TIN_BLOCk.get());
                 output.accept(ModItems.LOGGER_AXE.get());
+                output.accept(ModItems.WOODEN_SHEARS);
+                output.accept(ModItems.TWIG);
+                output.accept(ModItems.SHARP_STICK);
             }).build());
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

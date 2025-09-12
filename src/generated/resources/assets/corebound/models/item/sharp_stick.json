@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "corebound:item/wooden_club"
+    "layer0": "corebound:item/sharp_stick"
   }
 }
