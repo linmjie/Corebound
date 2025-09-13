@@ -23,9 +23,26 @@ public record LootItemBlockTagPropertyCondition(TagKey<Block> blockTag) implemen
         return ModLootRegistries.BLOCK_TAG.get();
     }
 
+    public static Builder matchesBlockTag(TagKey<Block> blockTag){
+        return new Builder(blockTag);
+    }
+
     @Override
     public boolean test(LootContext lootContext) {
         BlockState blockstate = lootContext.getParamOrNull(LootContextParams.BLOCK_STATE);
         return blockstate != null && blockstate.is(this.blockTag);
+    }
+
+    public static class Builder implements LootItemCondition.Builder {
+        private final TagKey<Block> blockTag;
+
+        public Builder(TagKey<Block> blockTag){
+            this.blockTag = blockTag;
+        }
+
+        @Override
+        public LootItemCondition build() {
+            return new LootItemBlockTagPropertyCondition(this.blockTag);
+        }
     }
 }

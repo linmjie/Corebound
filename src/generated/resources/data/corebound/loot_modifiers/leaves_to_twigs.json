@@ -2,8 +2,8 @@
   "type": "corebound:add_item",
   "conditions": [
     {
-      "condition": "corebound:block_tag_property",
-      "block_tag": "minecraft:leaves"
+      "block_tag": "minecraft:leaves",
+      "condition": "corebound:block_tag_property"
     },
     {
       "condition": "minecraft:match_tool",

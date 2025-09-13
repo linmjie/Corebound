@@ -3,6 +3,7 @@ package com.linmjie.corebound.datagen;
 import com.linmjie.corebound.Corebound;
 import com.linmjie.corebound.item.ModItems;
 import com.linmjie.corebound.loot.AddItemModifier;
+import com.linmjie.corebound.loot.LootItemBlockTagPropertyCondition;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -27,7 +28,7 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
     protected void start() {
         this.add("leaves_to_twigs",
                 new AddItemModifier(new LootItemCondition[]{
-                        LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.JUNGLE_LEAVES).build(),
+                        LootItemBlockTagPropertyCondition.matchesBlockTag(BlockTags.LEAVES).build(),
                         MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.WOODEN_SHEARS)).build(),
                         LootItemRandomChanceCondition.randomChance(1f).build() }, ModItems.TWIG.get()));
                 };
