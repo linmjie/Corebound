@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "corebound:raw_tin"
+      "item": "corebound:rock"
     }
   },
   "pattern": [
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "corebound:raw_tin_block"
+    "id": "minecraft:cobblestone"
   }
 }

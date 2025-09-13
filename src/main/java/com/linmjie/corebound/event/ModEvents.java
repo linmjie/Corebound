@@ -28,7 +28,7 @@ public class ModEvents {
 
     private static final AttributeModifier SPEAR_ENTITY_RANGE_MODIFIER =
             new AttributeModifier(ResourceLocation.withDefaultNamespace("spear_entity_range_modifier"),
-                    1.0, AttributeModifier.Operation.ADD_VALUE);
+                    1.5, AttributeModifier.Operation.ADD_VALUE);
 
     @SubscribeEvent
     public static void onLoggerUsage(BlockEvent.BreakEvent event) {
@@ -60,6 +60,7 @@ public class ModEvents {
         }
     }
 
+    //Event for giving player increased range for crits when holding a SpearItem
     @SubscribeEvent
     public static void onPlayerTickEvent(PlayerTickEvent.Pre event){
         Player player = event.getEntity();

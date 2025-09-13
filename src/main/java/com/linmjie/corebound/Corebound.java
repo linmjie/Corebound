@@ -93,6 +93,7 @@ public class Corebound {
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.RAW_TIN.get());
                 output.accept(ModBlocks.RAW_TIN_BLOCk.get());
+                output.accept(ModItems.ROCK.get());
                 output.accept(ModItems.LOGGER_AXE.get());
                 output.accept(ModItems.WOODEN_SHEARS);
                 output.accept(ModItems.TWIG);

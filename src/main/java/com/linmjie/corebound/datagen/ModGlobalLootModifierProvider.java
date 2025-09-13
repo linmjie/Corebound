@@ -4,11 +4,13 @@ import com.linmjie.corebound.Corebound;
 import com.linmjie.corebound.item.ModItems;
 import com.linmjie.corebound.loot.AddItemModifier;
 import com.linmjie.corebound.loot.LootItemBlockTagPropertyCondition;
+import com.linmjie.corebound.util.ModTags;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
@@ -30,7 +32,13 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 new AddItemModifier(new LootItemCondition[]{
                         LootItemBlockTagPropertyCondition.matchesBlockTag(BlockTags.LEAVES).build(),
                         MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.WOODEN_SHEARS)).build(),
-                        LootItemRandomChanceCondition.randomChance(1f).build() }, ModItems.TWIG.get()));
-                };
-
+                        LootItemRandomChanceCondition.randomChance(1f).build() },
+                        ModItems.TWIG.get()));
+        this.add("rocks_from_cobblestone",
+                new AddItemModifier(new LootItemCondition[]{
+                        LootItemBlockTagPropertyCondition.matchesBlockTag(ModTags.Blocks.DROPS_ROCKS).build(),
+                        MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE)).build(),
+                        LootItemRandomChanceCondition.randomChance(1f).build() },
+                        ModItems.ROCK.get()));
+    };
 }

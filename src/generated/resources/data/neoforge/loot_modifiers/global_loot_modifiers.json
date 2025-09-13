@@ -1,6 +1,7 @@
 {
   "entries": [
-    "corebound:leaves_to_twigs"
+    "corebound:leaves_to_twigs",
+    "corebound:rocks_from_cobblestone"
   ],
   "replace": false
 }

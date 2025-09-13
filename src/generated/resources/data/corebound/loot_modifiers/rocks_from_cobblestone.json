@@ -1,0 +1,20 @@
+{
+  "type": "corebound:add_item",
+  "conditions": [
+    {
+      "block_tag": "corebound:drops_rocks",
+      "condition": "corebound:block_tag_property"
+    },
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "items": "minecraft:wooden_pickaxe"
+      }
+    },
+    {
+      "chance": 1.0,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "corebound:rock"
+}

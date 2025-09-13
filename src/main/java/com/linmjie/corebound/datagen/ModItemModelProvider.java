@@ -18,6 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.RAW_TIN.get());
         basicItem(ModItems.TWIG.get());
+        basicItem(ModItems.ROCK.get());
         handheldItem(ModItems.WOODEN_SHEARS);
         handheldItem(ModItems.SHARP_STICK);
 

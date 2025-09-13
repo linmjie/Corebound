@@ -18,6 +18,7 @@ public class ModItems {
 
     public static final DeferredItem<Item> RAW_TIN = ITEMS.registerSimpleItem("raw_tin");
     public static final DeferredItem<Item> TWIG = ITEMS.registerSimpleItem("twig");
+    public static final DeferredItem<Item> ROCK = ITEMS.registerSimpleItem("rock");
 
     public static final DeferredItem<LoggerItem> LOGGER_AXE = ITEMS.register("logger_axe",
             () -> new LoggerItem(Tiers.IRON, new Item.Properties()

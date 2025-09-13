@@ -1,5 +1,6 @@
 package com.linmjie.corebound.loot;
 
+import com.linmjie.corebound.util.CoreboundUtils;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -16,10 +17,21 @@ public class AddItemModifier extends LootModifier {
             LootModifier.codecStart(inst).and(
                     BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter(e -> e.item)).apply(inst, AddItemModifier::new));
     private final Item item;
+    private final int min_drop;
+    private final int max_drop;
 
-    public AddItemModifier(LootItemCondition[] conditionsIn, Item item) {
+    public AddItemModifier(LootItemCondition[] conditionsIn, Item item, int minDrop, int maxDrop) {
         super(conditionsIn);
         this.item = item;
+        this.min_drop = minDrop;
+        this.max_drop = maxDrop;
+    }
+
+    public AddItemModifier(LootItemCondition[] conditionsIn, Item item){
+        super(conditionsIn);
+        this.item = item;
+        this.min_drop = 1;
+        this.max_drop = 1;
     }
 
     @Override
@@ -29,7 +41,7 @@ public class AddItemModifier extends LootModifier {
                 return generatedLoot;
             }
         }
-        generatedLoot.add(new ItemStack(this.item));
+        generatedLoot.add(new ItemStack(this.item, CoreboundUtils.getDropQuantity(this.item)));
         return generatedLoot;
     }
 
