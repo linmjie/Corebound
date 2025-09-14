@@ -10,6 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -38,4 +39,7 @@ public class ModItems {
             () -> new SpearItem(Tiers.WOOD, new Item.Properties().
                     attributes(SwordItem.createAttributes(Tiers.WOOD, 3, -3.2F))));
 
+    public static void register (IEventBus eventBus){
+        ITEMS.register(eventBus);
+    }
 }

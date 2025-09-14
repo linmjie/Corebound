@@ -44,9 +44,9 @@ public class Corebound {
         modEventBus.addListener(this::commonSetup);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
-        ModBlocks.BLOCKS.register(modEventBus);
+        ModBlocks.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
-        ModItems.ITEMS.register(modEventBus);
+        ModItems.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
 
@@ -56,8 +56,7 @@ public class Corebound {
         NeoForge.EVENT_BUS.register(this);
 
         //register mod global loot modifiers and pass through event bus
-        ModLootRegistries.LOOT_CONDITION_TYPES.register(modEventBus);
-        ModLootRegistries.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
+        ModLootRegistries.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
