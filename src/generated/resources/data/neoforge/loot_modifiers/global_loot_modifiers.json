@@ -1,7 +1,8 @@
 {
   "entries": [
     "corebound:leaves_to_twigs",
-    "corebound:rocks_from_cobblestone"
+    "corebound:rocks_from_cobblestone",
+    "corebound:remove_cobblestone_like_drops_from_cobblestone"
   ],
   "replace": false
 }

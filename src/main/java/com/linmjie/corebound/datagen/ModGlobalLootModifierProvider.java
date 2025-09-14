@@ -4,6 +4,7 @@ import com.linmjie.corebound.Corebound;
 import com.linmjie.corebound.item.ModItems;
 import com.linmjie.corebound.loot.AddItemModifier;
 import com.linmjie.corebound.loot.LootItemBlockTagPropertyCondition;
+import com.linmjie.corebound.loot.RemoveItemTagModifier;
 import com.linmjie.corebound.util.ModTags;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
@@ -39,6 +40,12 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                         LootItemBlockTagPropertyCondition.matchesBlockTag(ModTags.Blocks.DROPS_ROCKS).build(),
                         MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE)).build(),
                         LootItemRandomChanceCondition.randomChance(1f).build() },
-                        ModItems.ROCK.get()));
+                        ModItems.ROCK.get(), 2, 5));
+        this.add("remove_cobblestone_like_drops_from_cobblestone",
+                new RemoveItemTagModifier(new LootItemCondition[]{
+                        LootItemBlockTagPropertyCondition.matchesBlockTag(ModTags.Blocks.DROPS_ROCKS).build(),
+                        MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.WOODEN_PICKAXE)).build(),
+                        LootItemRandomChanceCondition.randomChance(1f).build() },
+                        ModTags.Items.ROCKS_REPLACE));
     };
 }

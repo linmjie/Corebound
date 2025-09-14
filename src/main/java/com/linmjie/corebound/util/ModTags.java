@@ -18,6 +18,7 @@ public class ModTags {
     }
 
     public static class Items {
+        public static final TagKey<Item> ROCKS_REPLACE = createTag("rocks_replace");
         public static final TagKey<Item> NON_STRIPPED_LOGS_THAT_BURN = createTag("non_stripped_logs_that_burn");
         public static final TagKey<Item> STRIPPED_LOGS_THAT_BURN = createTag("stripped_logs_that_burn");
         public static final TagKey<Item> ROCK_ADJACENT = createTag("rock_adjacent");

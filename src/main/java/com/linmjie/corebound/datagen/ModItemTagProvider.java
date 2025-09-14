@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import javax.annotation.Nullable;
@@ -53,5 +54,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ModTags.Items.ROCK_ADJACENT)
                 .add(Items.FLINT)
                 .add(ModItems.ROCK.get());
+        tag(ModTags.Items.ROCKS_REPLACE)
+                .add(Items.COBBLESTONE)
+                .add(Items.COBBLED_DEEPSLATE)
+                .add(Items.STONE)
+                .add(Items.DEEPSLATE)
+                .add(Items.BLACKSTONE);
     }
 }

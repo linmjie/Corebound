@@ -16,5 +16,7 @@
       "condition": "minecraft:random_chance"
     }
   ],
-  "item": "corebound:rock"
+  "item": "corebound:rock",
+  "max": 5,
+  "min": 2
 }

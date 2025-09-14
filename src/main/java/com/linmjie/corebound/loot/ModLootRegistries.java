@@ -16,6 +16,8 @@ public class ModLootRegistries {
 
     public static final Supplier<MapCodec<? extends IGlobalLootModifier>> ADD_ITEM =
             LOOT_MODIFIER_SERIALIZERS.register("add_item", () -> AddItemModifier.CODEC);
+    public static final Supplier<MapCodec<? extends IGlobalLootModifier>> REMOVE_ITEM_FROM_TAG =
+            LOOT_MODIFIER_SERIALIZERS.register("remove_item_from_tag", () -> RemoveItemTagModifier.CODEC);
 
 
 

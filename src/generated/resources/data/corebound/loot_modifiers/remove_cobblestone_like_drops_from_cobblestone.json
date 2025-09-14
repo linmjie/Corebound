@@ -1,14 +1,14 @@
 {
-  "type": "corebound:add_item",
+  "type": "corebound:remove_item_from_tag",
   "conditions": [
     {
-      "block_tag": "minecraft:leaves",
+      "block_tag": "corebound:drops_rocks",
       "condition": "corebound:block_tag_property"
     },
     {
       "condition": "minecraft:match_tool",
       "predicate": {
-        "items": "corebound:wooden_shears"
+        "items": "minecraft:wooden_pickaxe"
       }
     },
     {
@@ -16,7 +16,5 @@
       "condition": "minecraft:random_chance"
     }
   ],
-  "item": "corebound:twig",
-  "max": 1,
-  "min": 1
+  "item_tag": "corebound:rocks_replace"
 }
