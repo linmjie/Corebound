@@ -45,7 +45,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .define('#', ModItems.ROCK)
                 .unlockedBy(getHasName(ModItems.ROCK), has(ModItems.ROCK))
-                .save(recipeOutput);
+                .save(recipeOutput, modPrefix() + "cobblestone");
 
         ninePacker(recipeOutput, ModItems.RAW_TIN.get(), ModBlocks.RAW_TIN_BLOCk.get(), "tin");
     }
@@ -82,10 +82,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .define('#', pUnpacked)
                 .unlockedBy(getHasName(pUnpacked), has(pUnpacked))
-                .save(pRecipeOutput, Corebound.MODID+":"+pPackedName+"_from_"+pUnpackedName);
+                .save(pRecipeOutput, modPrefix() + pPackedName+"_from_"+pUnpackedName);
         ShapelessRecipeBuilder.shapeless(recipeCategory, pUnpacked, 9)
                 .requires(pPacked)
                 .unlockedBy(getHasName(pPacked), has(pPacked))
-                .save(pRecipeOutput, Corebound.MODID+":"+pUnpackedName+"_from_"+pPackedName);
+                .save(pRecipeOutput, modPrefix() + pUnpackedName+"_from_"+pPackedName);
+    }
+
+    protected static String modPrefix(){
+        return Corebound.MODID+":";
     }
 }

@@ -1,8 +1,10 @@
 package com.linmjie.corebound;
 
+import com.linmjie.corebound.block.ModBlockEntities;
 import com.linmjie.corebound.block.ModBlocks;
 import com.linmjie.corebound.item.ModItems;
 import com.linmjie.corebound.loot.ModLootRegistries;
+import com.linmjie.corebound.screen.ModMenuTypes;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -45,6 +47,7 @@ public class Corebound {
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ModItems.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
@@ -55,8 +58,11 @@ public class Corebound {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        //register mod global loot modifiers and pass through event bus
+        // Register mod global loot modifiers and pass through event bus
         ModLootRegistries.register(modEventBus);
+
+        //Register Menus
+        ModMenuTypes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
