@@ -1,0 +1,10 @@
+*
+!.gitignore
+!README.md
+!kubejs/
+!kubejs/**
+kubejs/*/jsconfig.json
+kubejs/config/web_server.json
+kubejs/config/probe-settings.json
+
+.probe
