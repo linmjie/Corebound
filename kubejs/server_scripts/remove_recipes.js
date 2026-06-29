@@ -3,6 +3,7 @@ ServerEvents.recipes(event => {
     //Cannot be done by {id: ['id1', 'id2', ...]}
     //Only by individual id, {id: 'id'}
     const removedRecipeIds = [
+        'shyomusic:music_disc_fragment',
         'minecraft:campfire',
         'minecraft:crafting_table',
         'minecraft:wooden_sword',
