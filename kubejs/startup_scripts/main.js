@@ -30,18 +30,10 @@ global.deletedItems = [
     'tfmg:casting_basin'
 ];
 
-Array.prototype.push.apply(global.deletedItems, global.getArmorAndTools('tfmg', 'aluminium'));
+Array.prototype.push.apply(global.deletedItems, global.getArmorAndTools('tfmg', 'aluminum'));
 Array.prototype.push.apply(global.deletedItems, global.getArmorAndTools('tfmg', 'lead'));
 Array.prototype.push.apply(global.deletedItems, global.getArmorAndTools('tfmg', 'steel'));
 
 global.deletedItems.forEach(item => {
     console.info('Removing item: ' + item);
 });
-
-const BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries');
-
-BuiltInRegistries.CREATIVE_MODE_TAB.keySet().forEach(id => {
-    StartupEvents.modifyCreativeTab(id.toString(), tabEvent => {
-        console.log('Modifying tab: ' + id)
-    })
-})
