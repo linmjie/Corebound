@@ -30,9 +30,9 @@ global.deletedItems = [
     'tfmg:casting_basin'
 ];
 
-Array.prototype.push.apply(global.deletedItems, global.getArmorAndTools('tfmg', 'aluminum'));
-Array.prototype.push.apply(global.deletedItems, global.getArmorAndTools('tfmg', 'lead'));
-Array.prototype.push.apply(global.deletedItems, global.getArmorAndTools('tfmg', 'steel'));
+Array.prototype.push.apply(global.deletedItems, global.getTools('tfmg', 'aluminum'));
+Array.prototype.push.apply(global.deletedItems, global.getTools('tfmg', 'lead'));
+Array.prototype.push.apply(global.deletedItems, global.getTools('tfmg', 'steel'));
 
 global.deletedItems.forEach(item => {
     console.info('Removing item: ' + item);
