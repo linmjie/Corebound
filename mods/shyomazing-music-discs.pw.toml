@@ -1,0 +1,13 @@
+name = "Shyomazing Music Discs"
+filename = "shyomusic-1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e2f10de8b1d9188bde4058a3b6db95285731bc8c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8342286
+project-id = 1591316

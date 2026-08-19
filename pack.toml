@@ -1,0 +1,13 @@
+name = "Corebound"
+author = "linmjie"
+version = "0.0.1"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "6f3306bf51db20df5a2ef453f71e823354e27106aac3677fe959b5533208bb8a"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.248"

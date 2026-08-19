@@ -1,10 +1,20 @@
 *
 !.gitignore
 !README.md
+!mods/
+!mods/**
+mods/*.jar
+
+# kubejs
 !kubejs/
 !kubejs/**
-kubejs/*/jsconfig.json
-kubejs/config/web_server.json
-kubejs/config/probe-settings.json
+!kubejs/*/jsconfig.json
+!kubejs/config/web_server.json
+!kubejs/config/probe-settings.json
 
-.probe
+# probe
+!.probe
+
+# packwiz
+!index.toml
+!pack.toml
