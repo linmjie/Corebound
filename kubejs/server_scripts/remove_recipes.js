@@ -3,7 +3,7 @@ ServerEvents.recipes(event => {
     const removedRecipeInputs = [];
     Array.prototype.push.apply(removedRecipeInputs, global.deletedItems);
 
-    const removedRecipeOutputs = ['tfmg:steel_axe'];
+    const removedRecipeOutputs = [];
     Array.prototype.push.apply(removedRecipeOutputs, global.deletedItems);
 
     // Remove by recipe id
