@@ -12,7 +12,7 @@ You'll need to do more once you've installed packwiz if you want to run the modp
  - Go to Edit Instance -> Settings -> Custom commands, then check the Custom Commands box and paste the following command into the pre-launch command field: `"$INST_JAVA" -jar packwiz-installer-bootstrap.jar http://localhost:8080/pack.toml`
 
 To run the modpack:
- - To update the core mod, CoreboundCore, you need to run the `gradlew modrinth`/`./tgradlew modrinth` command in the mod repository which builds the mod jar in an unlisted [modrinth mod](https://modrinth.com/mod/coreboundcore) which packwiz can fetch from
+ - Updating the core mod, CoreboundCore, requires you to run the `gradlew modrinth`/`./gradlew modrinth` command in the mod repository. This builds the mod jar in an unlisted [modrinth mod](https://modrinth.com/mod/coreboundcore) which packwiz can fetch from
     - For more information, check the mod repository's [README](https://github.com/linmjie/CoreboundCore/blob/main/README.md)
  - Recall that your pre-launch command includes the `http://localhost:8080/` argument. This localhost server can be created via `packwiz serve` in the modpack directory, which also automatically updates the index whenever you query it
  - Now you can press play and let it run (you may also want to checkout [probejs](https://kubejs.com/wiki/addons/probejs) functionality to make scripting more streamlined)
